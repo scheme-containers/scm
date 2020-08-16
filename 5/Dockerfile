@@ -8,8 +8,8 @@ RUN apt-get update && apt-get -y --no-install-recommends install \
  && rm -rf /var/lib/apt/lists/*
 WORKDIR /build
 COPY checksum checksum
-ADD https://groups.csail.mit.edu/mac/ftpdir/scm/scm-5f2.zip scm.zip
-ADD https://groups.csail.mit.edu/mac/ftpdir/scm/slib-3b5.zip slib.zip
+ADD https://groups.csail.mit.edu/mac/ftpdir/scm/scm-5f3.zip scm.zip
+ADD https://groups.csail.mit.edu/mac/ftpdir/scm/slib-3b6.zip slib.zip
 RUN sha256sum scm.zip slib.zip && sha256sum -c checksum
 RUN unzip scm.zip
 RUN unzip slib.zip
